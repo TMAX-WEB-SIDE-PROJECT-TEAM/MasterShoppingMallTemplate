@@ -1,0 +1,23 @@
+@use "common/styles/Theme";
+
+.header {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  width: 100%;
+  height: 90px;
+  padding-left: 23px;
+  padding-right: 37px;
+  font-size: 32px;
+  font-weight: 400;
+  font-family: Theme.$sansSerifFont;
+
+  color: Theme.$white;
+  background-color: Theme.$black;
+}
+
+.bell {
+  margin-left: auto;
+}

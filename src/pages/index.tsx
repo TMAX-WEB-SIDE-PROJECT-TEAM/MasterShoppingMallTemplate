@@ -1,11 +1,5 @@
-import Link from "next/link";
+import Page from "common/components/Page";
 
-const HomePage = () => (
-  <div>
-    <Link href="/shop">
-      <a>Shop</a>
-    </Link>
-  </div>
-);
+const HomePage = () => <Page>Home</Page>;
 
 export default HomePage;

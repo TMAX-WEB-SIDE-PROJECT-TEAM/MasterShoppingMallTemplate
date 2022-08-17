@@ -7,13 +7,32 @@
 - 요청: Axios
 - 패키지 관리: Yarn Berry
 - 상태관리: Recoil
-- 언어: TypeScript
 - 코드 관리: ESLint, Prettier
+
+## Structure
+
+프로젝트 구조
+
+- src
+  - common: 공통 코드
+    - components, hooks, ...
+  - modules: 각 기능에 대한 파일들
+    - 각 기능 (ex. cart)
+      - components, hooks, ...
+  - pages: 앱의 페이지 구조
+
+common, modules의 세부 폴더
+
+- hooks: React custom hook
+- components: React 컴포넌트
+- assets: 이미지 등의 리소스들
+- states: 공유 상태(Recoil)들
+- styles: 스타일 관련 파일들
 
 ## Requirements
 
 - [Node.js](https://nodejs.org/) 설치
-- Yarn Berry 사용을 위하여 npm corepack 설치 ([참고자료](https://yarnpkg.com/getting-started/install))
+- Yarn Berry 사용을 위하여 npm corepack 활성화 ([참고자료](https://yarnpkg.com/getting-started/install))
   - `corepack enable` 실행
   - 권한 에러 발생 시: Windows는 관리자 cmd에서, 그 외 OS는 sudo 붙여서 위 스크립트 실행
 

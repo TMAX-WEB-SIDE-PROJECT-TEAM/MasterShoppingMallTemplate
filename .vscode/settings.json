@@ -26,6 +26,9 @@
   "[scss]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "[markdown]": {
+    "editor.defaultFormatter": "vscode.markdown-language-features"
+  },
   "search.exclude": {
     "**/.yarn": true,
     "**/.pnp.*": true
