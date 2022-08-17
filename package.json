@@ -5,6 +5,7 @@
   "packageManager": "yarn@3.2.2",
   "scripts": {
     "dev": "next dev",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint --dir src",
     "lint:fix": "next lint --dir src --fix"
