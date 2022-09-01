@@ -1,0 +1,46 @@
+@use "common/styles/Theme";
+
+.categoryDetails {
+  width: 100%;
+  height: 100%;
+
+  font-family: Theme.$monospaceFont;
+}
+
+.banner {
+  position: relative;
+
+  width: 100%;
+}
+
+.bannerTitle {
+  position: absolute;
+
+  top: 24px;
+  left: 12px;
+
+  font-size: 40px;
+  font-weight: 400;
+  color: Theme.$white;
+}
+
+.content {
+  box-sizing: border-box;
+
+  margin-top: 42px;
+  border-top: 1px solid Theme.$gray2;
+}
+
+.sorter {
+  box-sizing: border-box;
+  text-align: right;
+
+  width: 100%;
+  margin-top: 5px;
+  padding-right: 12px;
+  font-size: 10px;
+}
+
+.cardGrid {
+  width: 100%;
+}

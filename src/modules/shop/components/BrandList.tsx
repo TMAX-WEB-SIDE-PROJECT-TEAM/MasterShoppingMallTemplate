@@ -1,30 +1,35 @@
+import { useState } from "react";
 import classNames from "classnames";
 
+import BrandPreview from "modules/shop/components/BrandPreview";
 import styles from "modules/shop/components/BrandList.module.scss";
 
-interface BrandListProps {
-  brands: Array<string>;
-  selectedBrand: string;
-  setSelectedBrand: (value: string) => void;
-}
+const brands = ["Pottery", "grds", "Potter"];
 
-const BrandList = ({ brands, selectedBrand, setSelectedBrand }: BrandListProps) => (
-  <div className={styles.brandList}>
-    Brand
-    <div className={styles.content}>
-      {brands.map(brand => (
-        <button
-          className={classNames(styles.button, { [styles.isSelected]: brand === selectedBrand })}
-          key={brand}
-          onClick={() => {
-            setSelectedBrand(brand);
-          }}
-        >
-          {brand}
-        </button>
-      ))}
+const BrandList = () => {
+  const [selectedBrand, setSelectedBrand] = useState("Pottery");
+
+  return (
+    <div className={styles.brandList}>
+      <div className={styles.menu}>
+        Brand
+        <div className={styles.menuContent}>
+          {brands.map(brand => (
+            <button
+              className={classNames(styles.brandButton, { [styles.isSelected]: brand === selectedBrand })}
+              key={brand}
+              onClick={() => {
+                setSelectedBrand(brand);
+              }}
+            >
+              {brand}
+            </button>
+          ))}
+        </div>
+      </div>
+      <BrandPreview />
     </div>
-  </div>
-);
+  );
+};
 
 export default BrandList;

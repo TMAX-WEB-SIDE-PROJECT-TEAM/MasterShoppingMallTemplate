@@ -1,10 +1,10 @@
 import Page from "common/components/Page";
-import Shop from "modules/shop/components/Shop";
+import BrandList from "modules/shop/components/BrandList";
 
-const ShopPage = () => (
+const BrandListPage = () => (
   <Page>
-    <Shop />
+    <BrandList />
   </Page>
 );
 
-export default ShopPage;
+export default BrandListPage;
