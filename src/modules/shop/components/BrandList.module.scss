@@ -1,0 +1,34 @@
+@use "common/styles/Theme";
+@use "common/styles/Utils";
+
+.brandList {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 108px;
+  height: 100%;
+  padding-top: 25px;
+  font-size: 12px;
+  font-weight: 400;
+  font-family: Theme.$monospaceFont;
+
+  background-color: #f1f1f1;
+}
+
+.content {
+  width: 100%;
+  margin-top: 55px;
+}
+
+.button {
+  @include Utils.resetButton;
+
+  width: 100%;
+  height: 46px;
+
+  &.isSelected {
+    background-color: Theme.$white;
+  }
+}
