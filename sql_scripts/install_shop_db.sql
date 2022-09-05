@@ -8,18 +8,18 @@ GRANT ALL PRIVILEGES ON shop_template.* TO 'Maria'@'%';
 
 FLUSH PRIVILEGES;
 
-CREATE TABLE `User` (
+CREATE TABLE `user` (
   `id` varchar(255) PRIMARY KEY,
   `client_id` int,
   `name` varchar(15),
   `email` varchar(30),
   `phone` varchar(15),
-  `birth` varchar(10),s
+  `birth` varchar(10),
   `password` varchar(100),
   `created_at` timestamp
 );
 
-CREATE TABLE `OauthClientDetails` (
+CREATE TABLE `oauth_client_details` (
   `id` int PRIMARY KEY AUTO_INCREMENT,
   `resource_id` varchar(255),
   `client_secret` timestamp,
@@ -35,7 +35,7 @@ CREATE TABLE `OauthClientDetails` (
   `autoapprove` VARCHAR(256)
 );
 
-CREATE TABLE `OauthAccessToken` (
+CREATE TABLE `oauth_access_token` (
   `authentication_id` int PRIMARY KEY AUTO_INCREMENT,
   `token_id` VARCHAR(256),
   `token` blob,
@@ -45,18 +45,18 @@ CREATE TABLE `OauthAccessToken` (
   `refresh_token` VARCHAR(256)
 );
 
-CREATE TABLE `OauthRefreshToken` (
+CREATE TABLE `oauth_refresh_token` (
   `token_id` VARCHAR(256),
   `token` blob,
   `authentication` blob
 );
 
-CREATE TABLE `OauthCode` (
+CREATE TABLE `oauth_code` (
   `code` VARCHAR(256),
   `authentication` blob
 );
 
-CREATE TABLE `OauthApprovals` (
+CREATE TABLE `oauth_approvals` (
   `user_id` VARCHAR(256),
   `client_id` int,
   `scope` VARCHAR(256),
@@ -65,25 +65,25 @@ CREATE TABLE `OauthApprovals` (
   `lastModifiedAt` TIMESTAMP
 );
 
-CREATE TABLE `Buyer` (
+CREATE TABLE `buyer` (
   `id` int PRIMARY KEY AUTO_INCREMENT,
   `user_id` varchar(255),
   `class_num` varchar(255),
   `savings` int
 );
 
-CREATE TABLE `Address` (
+CREATE TABLE `address` (
   `buyer_id` int,
   `address` varchar(255),
   `created_at` timestamp,
   `default` boolean
 );
 
-CREATE TABLE `Product` (
-  `id` int PRIMARY KEY AUTO_INCREMENT,
-  `lg_category_id` int,
-  `md_category_id` int,
-  `sm_category_id` int,
+CREATE TABLE `product` (
+  `id` bigint PRIMARY KEY AUTO_INCREMENT,
+  `lg_category_id` bigint,
+  `md_category_id` bigint,
+  `sm_category_id` bigint,
   `code` varchar(255),
   `name` varchar(255),
   `price` int,
@@ -94,44 +94,44 @@ CREATE TABLE `Product` (
   `updated_at` timestamp
 );
 
-CREATE TABLE `ProuductImage` (
-  `id` int PRIMARY KEY AUTO_INCREMENT,
-  `product_id` int,
+CREATE TABLE `prouduct_image` (
+  `id` bigint PRIMARY KEY AUTO_INCREMENT,
+  `product_id` bigint,
   `url` varchar(255),
   `thumbnail` boolean
 );
 
-CREATE TABLE `LargeCategory` (
-  `id` int PRIMARY KEY AUTO_INCREMENT,
+CREATE TABLE `large_category` (
+  `id` bigint PRIMARY KEY AUTO_INCREMENT,
   `name` varchar(255)
 );
 
-CREATE TABLE `MediumCategory` (
-  `id` int PRIMARY KEY AUTO_INCREMENT,
+CREATE TABLE `medium_category` (
+  `id` bigint PRIMARY KEY AUTO_INCREMENT,
   `name` varchar(255)
 );
 
-CREATE TABLE `SmallCategory` (
-  `id` int PRIMARY KEY AUTO_INCREMENT,
+CREATE TABLE `small_category` (
+  `id` bigint PRIMARY KEY AUTO_INCREMENT,
   `name` varchar(255)
 );
 
-CREATE TABLE `Option` (
+CREATE TABLE `option` (
   `id` int PRIMARY KEY AUTO_INCREMENT,
-  `product_id` int,
+  `product_id` bigint,
   `name` varchar(255),
   `content` varchar(255),
   `price` int,
   `created_at` timestamp
 );
 
-CREATE TABLE `Warehouse` (
+CREATE TABLE `warehouse` (
   `id` int PRIMARY KEY AUTO_INCREMENT,
   `address` varchar(255),
   `phone` varchar(255)
 );
 
-CREATE TABLE `Item` (
+CREATE TABLE `item` (
   `id` int PRIMARY KEY AUTO_INCREMENT,
   `option_id` int,
   `warehouse_id` int,
@@ -139,16 +139,16 @@ CREATE TABLE `Item` (
   `cost` int
 );
 
-CREATE TABLE `Supply` (
+CREATE TABLE `supply` (
   `item_id` int,
   `warehouse_id` int,
   `created_at` timestamp,
   `quantity` int
 );
 
-CREATE TABLE `Order` (
+CREATE TABLE `order` (
   `id` int PRIMARY KEY AUTO_INCREMENT,
-  `product_id` int,
+  `product_id` bigint,
   `buyer_id` int,
   `ordered_at` timestamp,
   `status` varchar(255),
@@ -157,53 +157,53 @@ CREATE TABLE `Order` (
   `option_id` int
 );
 
-CREATE TABLE `Cart` (
+CREATE TABLE `cart` (
   `id` int PRIMARY KEY AUTO_INCREMENT,
-  `product_id` int,
+  `product_id` bigint,
   `buyer_id`int,
   `added_at` timestamp,
   `quantity` int,
   `option_id` int
 );
 
-ALTER TABLE `User` ADD FOREIGN KEY (`client_id`) REFERENCES `OauthClientDetails` (`id`);
+ALTER TABLE `User` ADD FOREIGN KEY (`client_id`) REFERENCES `oauth_client_details` (`id`);
 
-ALTER TABLE `OauthAccessToken` ADD FOREIGN KEY (`client_id`) REFERENCES `OauthClientDetails` (`id`);
+ALTER TABLE `oauth_access_token` ADD FOREIGN KEY (`client_id`) REFERENCES `oauth_client_details` (`id`);
 
-ALTER TABLE `OauthApprovals` ADD FOREIGN KEY (`user_id`) REFERENCES `User` (`id`);
+ALTER TABLE `oauth_approvals` ADD FOREIGN KEY (`user_id`) REFERENCES `user` (`id`);
 
-ALTER TABLE `OauthApprovals` ADD FOREIGN KEY (`client_id`) REFERENCES `OauthClientDetails` (`id`);
+ALTER TABLE `oauth_approvals` ADD FOREIGN KEY (`client_id`) REFERENCES `oauth_client_details` (`id`);
 
-ALTER TABLE `Buyer` ADD FOREIGN KEY (`user_id`) REFERENCES `User` (`id`);
+ALTER TABLE `buyer` ADD FOREIGN KEY (`user_id`) REFERENCES `user` (`id`);
 
-ALTER TABLE `Address` ADD FOREIGN KEY (`buyer_id`) REFERENCES `Buyer` (`id`);
+ALTER TABLE `address` ADD FOREIGN KEY (`buyer_id`) REFERENCES `buyer` (`id`);
 
-ALTER TABLE `Product` ADD FOREIGN KEY (`lg_category_id`) REFERENCES `LargeCategory` (`id`);
+ALTER TABLE `product` ADD FOREIGN KEY (`lg_category_id`) REFERENCES `large_category` (`id`);
 
-ALTER TABLE `Product` ADD FOREIGN KEY (`md_category_id`) REFERENCES `MediumCategory` (`id`);
+ALTER TABLE `product` ADD FOREIGN KEY (`md_category_id`) REFERENCES `medium_category` (`id`);
 
-ALTER TABLE `Product` ADD FOREIGN KEY (`sm_category_id`) REFERENCES `SmallCategory` (`id`);
+ALTER TABLE `product` ADD FOREIGN KEY (`sm_category_id`) REFERENCES `small_category` (`id`);
 
-ALTER TABLE `ProuductImage` ADD FOREIGN KEY (`product_id`) REFERENCES `Product` (`id`);
+ALTER TABLE `prouduct_image` ADD FOREIGN KEY (`product_id`) REFERENCES `product` (`id`);
 
-ALTER TABLE `Option` ADD FOREIGN KEY (`product_id`) REFERENCES `Product` (`id`);
+ALTER TABLE `option` ADD FOREIGN KEY (`product_id`) REFERENCES `product` (`id`);
 
-ALTER TABLE `Item` ADD FOREIGN KEY (`option_id`) REFERENCES `Option` (`id`);
+ALTER TABLE `item` ADD FOREIGN KEY (`option_id`) REFERENCES `option` (`id`);
 
-ALTER TABLE `Item` ADD FOREIGN KEY (`warehouse_id`) REFERENCES `Warehouse` (`id`);
+ALTER TABLE `item` ADD FOREIGN KEY (`warehouse_id`) REFERENCES `warehouse` (`id`);
 
-ALTER TABLE `Supply` ADD FOREIGN KEY (`item_id`) REFERENCES `Item` (`id`);
+ALTER TABLE `supply` ADD FOREIGN KEY (`item_id`) REFERENCES `item` (`id`);
 
-ALTER TABLE `Supply` ADD FOREIGN KEY (`warehouse_id`) REFERENCES `Warehouse` (`id`);
+ALTER TABLE `supply` ADD FOREIGN KEY (`warehouse_id`) REFERENCES `warehouse` (`id`);
 
-ALTER TABLE `Order` ADD FOREIGN KEY (`product_id`) REFERENCES `Product` (`id`);
+ALTER TABLE `order` ADD FOREIGN KEY (`product_id`) REFERENCES `product` (`id`);
 
-ALTER TABLE `Order` ADD FOREIGN KEY (`buyer_id`) REFERENCES `Buyer` (`id`);
+ALTER TABLE `order` ADD FOREIGN KEY (`buyer_id`) REFERENCES `buyer` (`id`);
 
-ALTER TABLE `Order` ADD FOREIGN KEY (`option_id`) REFERENCES `Option` (`id`);
+ALTER TABLE `order` ADD FOREIGN KEY (`option_id`) REFERENCES `option` (`id`);
 
-ALTER TABLE `Cart` ADD FOREIGN KEY (`product_id`) REFERENCES `Product` (`id`);
+ALTER TABLE `cart` ADD FOREIGN KEY (`product_id`) REFERENCES `product` (`id`);
 
-ALTER TABLE `Cart` ADD FOREIGN KEY (`buyer_id`) REFERENCES `Buyer` (`id`);
+ALTER TABLE `cart` ADD FOREIGN KEY (`buyer_id`) REFERENCES `buyer` (`id`);
 
-ALTER TABLE `Cart` ADD FOREIGN KEY (`option_id`) REFERENCES `Option` (`id`);
+ALTER TABLE `cart` ADD FOREIGN KEY (`option_id`) REFERENCES `option` (`id`);
