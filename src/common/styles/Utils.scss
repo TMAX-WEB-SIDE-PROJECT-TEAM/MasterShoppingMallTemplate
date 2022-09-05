@@ -1,0 +1,35 @@
+@mixin resetButton {
+  cursor: pointer;
+  box-sizing: border-box;
+
+  border: 0;
+  padding: 0;
+  color: inherit;
+  background-color: transparent;
+  -webkit-tap-highlight-color: transparent;
+
+  font-family: inherit;
+  font-size: inherit;
+}
+
+@mixin resetLink {
+  text-decoration: none;
+
+  color: inherit;
+  -webkit-tap-highlight-color: transparent;
+
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/**
+ * Reset <h1>, <h2>, ...
+ */
+@mixin resetTitle {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin putShadow {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}

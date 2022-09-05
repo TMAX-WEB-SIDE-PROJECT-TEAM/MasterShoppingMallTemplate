@@ -8,6 +8,7 @@ export const routes = {
   },
   shop: {
     index: "/shop",
+    categoryDetails: "/shop/category-details",
   },
   cart: {
     index: "/cart",
