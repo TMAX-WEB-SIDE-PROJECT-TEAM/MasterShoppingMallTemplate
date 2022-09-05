@@ -1,0 +1,56 @@
+@use "common/styles/Theme";
+@use "common/styles/Utils";
+
+.brandPreview {
+  @include Utils.putShadow;
+
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  flex: 1;
+  height: 100%;
+  padding-top: 24px;
+  padding-left: 24px;
+  padding-right: 24px;
+
+  font-family: Theme.$monospaceFont;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.weeklyBest {
+  position: relative;
+
+  width: 100%;
+  max-width: 300px;
+}
+
+.weeklyBestTitle {
+  position: absolute;
+
+  top: 9px;
+  right: 16px;
+}
+
+.categoryTitle {
+  margin-top: 11px;
+}
+
+.categoryGrid {
+  width: 100%;
+  margin-top: 15px;
+}
+
+.categoryCell {
+  text-align: center;
+  display: inline-block;
+
+  width: 50%;
+  margin-bottom: 36px;
+}
+
+.categoryLink {
+  @include Utils.resetLink;
+}

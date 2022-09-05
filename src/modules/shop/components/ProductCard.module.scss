@@ -1,0 +1,26 @@
+@use "common/styles/Theme";
+
+.productCard {
+  box-sizing: border-box;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 50%;
+  max-width: 200px;
+  height: 169px;
+  padding-top: 8px;
+
+  font-family: Theme.$monospaceFont;
+  font-size: 6px;
+  font-weight: 400;
+}
+
+.imageArea {
+  margin-top: 6px;
+}
+
+.price {
+  margin-top: auto;
+  margin-bottom: 15px;
+}
