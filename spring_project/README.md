@@ -3,7 +3,7 @@
 - java 객체 및 라이브러리 관리 : Spring
 - Build tool : gradle 
 - Database : Maria DB
-- Api document : GitBook
+- Api document : [GitBook](https://mae-2.gitbook.io/mastershoppingmalltemplate/v1.0/category)
 
 ## Requirements
 
