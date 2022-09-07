@@ -1,7 +1,6 @@
 import WrappedLink from "common/components/WrappedLink";
 import styles from "modules/shop/components/BrandPreview.module.scss";
 
-import DummyBrand1 from "modules/shop/assets/DummyBrand1.svg";
 import { routes } from "common/Routes";
 
 const categories = ["T-Shirts", "Pants", "Jacket", "Shirts"];
@@ -9,7 +8,7 @@ const categories = ["T-Shirts", "Pants", "Jacket", "Shirts"];
 const BrandPreview = () => (
   <div className={styles.brandPreview}>
     <div className={styles.weeklyBest}>
-      <DummyBrand1 />
+      <img className={styles.weeklyBestImage} src="/image/shop-dummy-brand1.png" alt="Weekly best" />
       <div className={styles.weeklyBestTitle}>Weekly Best</div>
     </div>
     <div className={styles.categoryTitle}>Category</div>

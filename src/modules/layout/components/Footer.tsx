@@ -1,21 +1,18 @@
 import { ReactNode } from "react";
 
+import { routes } from "common/Routes";
 import WrappedLink from "common/components/WrappedLink";
 import styles from "modules/layout/components/Footer.module.scss";
-import HomeIcon from "modules/layout/assets/HomeIcon.svg";
-import ShopIcon from "modules/layout/assets/ShopIcon.svg";
-import CartIcon from "modules/layout/assets/CartIcon.svg";
-import NotiIcon from "modules/layout/assets/NotiIcon.svg";
-import MeIcon from "modules/layout/assets/MeIcon.svg";
-import { routes } from "common/Routes";
+
+import { FooterCartSVG, FooterHomeSVG, FooterMeSVG, FooterNotiSVG, FooterShopSVG } from "common/components/Assets";
 
 const Footer = () => (
   <div className={styles.footer}>
-    <Item icon={<HomeIcon />} title="Home" url={routes.home.index} />
-    <Item icon={<ShopIcon />} title="Shop" url={routes.shop.index} />
-    <Item icon={<CartIcon />} title="Cart" url={routes.cart.index} />
-    <Item icon={<NotiIcon />} title="Noti" url={routes.noti.index} />
-    <Item icon={<MeIcon />} title="Me" url={routes.me.index} />
+    <Item icon={<FooterHomeSVG />} title="Home" url={routes.home.index} />
+    <Item icon={<FooterShopSVG />} title="Shop" url={routes.shop.index} />
+    <Item icon={<FooterCartSVG />} title="Cart" url={routes.cart.index} />
+    <Item icon={<FooterNotiSVG />} title="Noti" url={routes.noti.index} />
+    <Item icon={<FooterMeSVG />} title="Me" url={routes.me.index} />
   </div>
 );
 
