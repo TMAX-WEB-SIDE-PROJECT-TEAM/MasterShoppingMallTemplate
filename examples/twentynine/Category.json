@@ -1,0 +1,203 @@
+{
+  "max_price": 1479000,
+  "min_price": 48000,
+  "product_total_count": 303,
+  "product_brands": [
+    {
+      "front_brand_no": 16572,
+      "product_count": 36,
+      "front_brand_name_kor": "알로 요가",
+      "front_brand_name_eng": "ALO YOGA"
+    },
+    { "front_brand_no": 15531, "product_count": 32, "front_brand_name_kor": "가니", "front_brand_name_eng": "GANNI" },
+    {
+      "front_brand_no": 17254,
+      "product_count": 25,
+      "front_brand_name_kor": "캐나다구스",
+      "front_brand_name_eng": "CANADA GOOSE"
+    },
+    {
+      "front_brand_no": 17351,
+      "product_count": 22,
+      "front_brand_name_kor": "꾸레쥬",
+      "front_brand_name_eng": "COURREGES"
+    },
+    {
+      "front_brand_no": 17439,
+      "product_count": 21,
+      "front_brand_name_kor": "베이스레인지",
+      "front_brand_name_eng": "BASERANGE"
+    },
+    {
+      "front_brand_no": 7117,
+      "product_count": 19,
+      "front_brand_name_kor": "메종키츠네",
+      "front_brand_name_eng": "MAISON KITSUNE"
+    },
+    { "front_brand_no": 15757, "product_count": 16, "front_brand_name_kor": "토템", "front_brand_name_eng": "TOTEME" },
+    {
+      "front_brand_no": 18520,
+      "product_count": 13,
+      "front_brand_name_kor": "와일드동키",
+      "front_brand_name_eng": "WILD DONKEY"
+    },
+    {
+      "front_brand_no": 12997,
+      "product_count": 12,
+      "front_brand_name_kor": "아크네 스튜디오",
+      "front_brand_name_eng": "ACNE STUDIOS"
+    },
+    {
+      "front_brand_no": 16771,
+      "product_count": 11,
+      "front_brand_name_kor": "J.W. 앤더슨",
+      "front_brand_name_eng": "J.W. ANDERSON"
+    },
+    {
+      "front_brand_no": 4449,
+      "product_count": 10,
+      "front_brand_name_kor": "꼼데가르송 플레이",
+      "front_brand_name_eng": "COMME des GARÇONS PLAY"
+    },
+    { "front_brand_no": 11728, "product_count": 9, "front_brand_name_kor": "아미", "front_brand_name_eng": "AMI" },
+    { "front_brand_no": 13848, "product_count": 8, "front_brand_name_kor": "가니", "front_brand_name_eng": "GANNI" },
+    { "front_brand_no": 17753, "product_count": 8, "front_brand_name_kor": "스투시", "front_brand_name_eng": "STUSSY" },
+    {
+      "front_brand_no": 16681,
+      "product_count": 7,
+      "front_brand_name_kor": "자크뮈스",
+      "front_brand_name_eng": "JACQUEMUS"
+    },
+    { "front_brand_no": 15521, "product_count": 6, "front_brand_name_kor": "아페쎄", "front_brand_name_eng": "A.P.C." },
+    {
+      "front_brand_no": 17386,
+      "product_count": 5,
+      "front_brand_name_kor": "비비안웨스트우드",
+      "front_brand_name_eng": "VIVIENNEWESTWOOD"
+    },
+    {
+      "front_brand_no": 18129,
+      "product_count": 5,
+      "front_brand_name_kor": "팔로마울",
+      "front_brand_name_eng": "PALOMA WOOL"
+    },
+    {
+      "front_brand_no": 16529,
+      "product_count": 3,
+      "front_brand_name_kor": "이자벨 마랑 에뚜왈",
+      "front_brand_name_eng": "ISABEL MARANT ETOILE"
+    },
+    { "front_brand_no": 16541, "product_count": 3, "front_brand_name_kor": "토템", "front_brand_name_eng": "TOTEME" },
+    {
+      "front_brand_no": 16571,
+      "product_count": 3,
+      "front_brand_name_kor": "코페르니",
+      "front_brand_name_eng": "COPERNI"
+    },
+    {
+      "front_brand_no": 16592,
+      "product_count": 3,
+      "front_brand_name_kor": "질샌더",
+      "front_brand_name_eng": "JIL SANDER"
+    },
+    { "front_brand_no": 17548, "product_count": 3, "front_brand_name_kor": "마르니", "front_brand_name_eng": "MARNI" },
+    {
+      "front_brand_no": 17812,
+      "product_count": 3,
+      "front_brand_name_kor": "막스마라",
+      "front_brand_name_eng": "MAX MARA"
+    },
+    {
+      "front_brand_no": 18648,
+      "product_count": 3,
+      "front_brand_name_kor": "알라이아",
+      "front_brand_name_eng": "ALAIA"
+    },
+    {
+      "front_brand_no": 12908,
+      "product_count": 2,
+      "front_brand_name_kor": "씨피 컴퍼니",
+      "front_brand_name_eng": "CP COMPANY"
+    },
+    {
+      "front_brand_no": 16531,
+      "product_count": 2,
+      "front_brand_name_kor": "톰브라운",
+      "front_brand_name_eng": "THOM BROWNE"
+    },
+    {
+      "front_brand_no": 16773,
+      "product_count": 2,
+      "front_brand_name_kor": "MM6",
+      "front_brand_name_eng": "MM6 MAISON MARGIELA"
+    },
+    { "front_brand_no": 17053, "product_count": 2, "front_brand_name_kor": "셀린느", "front_brand_name_eng": "CELINE" },
+    {
+      "front_brand_no": 17291,
+      "product_count": 2,
+      "front_brand_name_kor": "카사블랑카",
+      "front_brand_name_eng": "CASABLANCA"
+    },
+    {
+      "front_brand_no": 4130,
+      "product_count": 1,
+      "front_brand_name_kor": "메종 키츠네",
+      "front_brand_name_eng": "MAISON KITSUNE"
+    },
+    {
+      "front_brand_no": 7937,
+      "product_count": 1,
+      "front_brand_name_kor": "메종 마르지엘라",
+      "front_brand_name_eng": "MAISON MARGIELA"
+    },
+    {
+      "front_brand_no": 8013,
+      "product_count": 1,
+      "front_brand_name_kor": "씨피 컴퍼니",
+      "front_brand_name_eng": "C.P. COMPANY"
+    },
+    {
+      "front_brand_no": 15561,
+      "product_count": 1,
+      "front_brand_name_kor": "아워레가시",
+      "front_brand_name_eng": "OUR LEGACY"
+    },
+    {
+      "front_brand_no": 16783,
+      "product_count": 1,
+      "front_brand_name_kor": "미우미우",
+      "front_brand_name_eng": "MIUMIU"
+    },
+    {
+      "front_brand_no": 16921,
+      "product_count": 1,
+      "front_brand_name_kor": "스톤아일랜드",
+      "front_brand_name_eng": "STONE ISLAND"
+    },
+    {
+      "front_brand_no": 17122,
+      "product_count": 1,
+      "front_brand_name_kor": "아크네 스튜디오",
+      "front_brand_name_eng": "ACNE STUDIOS"
+    }
+  ],
+  "product_color": [
+    { "hex": "#d50c0c", "index": 1, "han_name": "레드", "doc_count": 10 },
+    { "hex": "#f66800", "index": 2, "han_name": "오렌지", "doc_count": 2 },
+    { "hex": "#f3e219", "index": 3, "han_name": "옐로우", "doc_count": 7 },
+    { "hex": "#764006", "index": 4, "han_name": "브라운", "doc_count": 6 },
+    { "hex": "#c47c26", "index": 5, "han_name": "카멜", "doc_count": 2 },
+    { "hex": "#ebbd87", "index": 6, "han_name": "탄", "doc_count": 1 },
+    { "hex": "#f5ecc3", "index": 7, "han_name": "베이지", "doc_count": 7 },
+    { "hex": "#fbfcdf", "index": 8, "han_name": "아이보리", "doc_count": 1 },
+    { "hex": "#21ba21", "index": 10, "han_name": "그린", "doc_count": 8 },
+    { "hex": "#3585c2", "index": 13, "han_name": "블루", "doc_count": 27 },
+    { "hex": "#0f4384", "index": 14, "han_name": "네이비", "doc_count": 20 },
+    { "hex": "#b163af", "index": 16, "han_name": "라벤더", "doc_count": 1 },
+    { "hex": "#eb3691", "index": 18, "han_name": "핑크", "doc_count": 15 },
+    { "hex": "#000000", "index": 19, "han_name": "블랙", "doc_count": 88 },
+    { "hex": "#6b6b6b", "index": 20, "han_name": "차콜", "doc_count": 1 },
+    { "hex": "#d9d9d9", "index": 21, "han_name": "그레이", "doc_count": 27 },
+    { "hex": "#ffffff", "index": 23, "han_name": "화이트", "doc_count": 45 }
+  ]
+}

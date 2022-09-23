@@ -1,0 +1,22 @@
+{
+  "count": 2,
+  "next": "/item-review/photo/?item_no=1680124&limit=1&offset=1",
+  "previous": null,
+  "results": [
+    {
+      "item_review_no": 4095414,
+      "user_id": "chalk***",
+      "url": ["/next-product/2022/09/18/5de23ee607c5434cb70d68654d08c71e_20220918213549.jpeg"],
+      "contents": "겨울 캠핑 때 레이어드 해서 입으려고 구매했어요. 워낙 유명한 제품이라 고민 없이 구매했는데, 너무 좋네요.",
+      "insert_timestamp": "2022-09-18 21:36:34",
+      "point": 5,
+      "option_value": ["[색상:사이즈]블랙:M"],
+      "review_type": 0,
+      "registration_type": "USER",
+      "gift_review": null,
+      "is_gift": "F",
+      "is_visible": "T",
+      "user_size": ["176cm", "75kg"]
+    }
+  ]
+}
