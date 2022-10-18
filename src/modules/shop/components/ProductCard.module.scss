@@ -1,6 +1,9 @@
 @use "common/styles/Theme";
+@use "common/styles/Utils";
 
 .productCard {
+  @include Utils.resetLink;
+
   box-sizing: border-box;
   display: inline-flex;
   flex-direction: column;

@@ -1,5 +1,5 @@
-import { ReactNode } from "react";
-
+import { routes } from "common/Routes";
+import WrappedLink from "common/components/WrappedLink";
 import styles from "modules/shop/components/ProductCard.module.scss";
 
 interface ProductCardProps {
@@ -9,11 +9,11 @@ interface ProductCardProps {
 }
 
 const ProductCard = ({ name, price, imageURL }: ProductCardProps) => (
-  <div className={styles.productCard}>
+  <WrappedLink className={styles.productCard} href={routes.shop.productDetail}>
     <div>{name}</div>
     <img className={styles.imageArea} src={imageURL} alt={name} />
     <div className={styles.price}>KRW {price}</div>
-  </div>
+  </WrappedLink>
 );
 
 export default ProductCard;
