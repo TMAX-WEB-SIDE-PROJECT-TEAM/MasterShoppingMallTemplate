@@ -166,6 +166,20 @@ CREATE TABLE `cart` (
   `option_id` int
 );
 
+CREATE TABLE `magazine` (
+  `id` int PRIMARY KEY AUTO_INCREMENT,
+  `lgId` bigint,
+  `mdId` bigint,
+  `smId` bigint,
+  `content` varchar(255)
+);
+
+ALTER TABLE `magazine` ADD FOREIGN KEY (`lgId`) REFERENCES `large_category` (`id`);
+
+ALTER TABLE `magazine` ADD FOREIGN KEY (`mdId`) REFERENCES `medium_category` (`id`);
+
+ALTER TABLE `magazine` ADD FOREIGN KEY (`smId`) REFERENCES `small_category` (`id`);
+
 ALTER TABLE `User` ADD FOREIGN KEY (`client_id`) REFERENCES `oauth_client_details` (`id`);
 
 ALTER TABLE `oauth_access_token` ADD FOREIGN KEY (`client_id`) REFERENCES `oauth_client_details` (`id`);
