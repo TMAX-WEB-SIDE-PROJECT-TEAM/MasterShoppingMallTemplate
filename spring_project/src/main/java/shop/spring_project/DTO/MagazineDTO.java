@@ -20,11 +20,4 @@ public class MagazineDTO {
 
     private String content;
 
-    /*
-    public MagazineDTO(Optional<Magazine> entity){
-        this.id = entity.get().getId();
-        this.lgId = entity.get().getLgId();
-        this.mdId = entity.get().getMdId();
-        this.content = entity.get().getContent();
-    }*/
 }

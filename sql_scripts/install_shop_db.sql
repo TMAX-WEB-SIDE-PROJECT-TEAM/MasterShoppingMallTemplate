@@ -91,10 +91,14 @@ CREATE TABLE `product` (
   `summary` varchar(255),
   `content` varchar(255),
   `created_at` timestamp,
-  `updated_at` timestamp
+  `updated_at` timestamp,
+  `option_id` int,
+  `warehouse_id` int,
+  `quantity` int,
+  `cost` int
 );
 
-CREATE TABLE `prouduct_image` (
+CREATE TABLE `product_image` (
   `id` bigint PRIMARY KEY AUTO_INCREMENT,
   `product_id` bigint,
   `url` varchar(255),
@@ -140,7 +144,7 @@ CREATE TABLE `item` (
 );
 
 CREATE TABLE `supply` (
-  `item_id` int,
+  `product_id` bigint,
   `warehouse_id` int,
   `created_at` timestamp,
   `quantity` int
@@ -198,7 +202,7 @@ ALTER TABLE `product` ADD FOREIGN KEY (`md_category_id`) REFERENCES `medium_cate
 
 ALTER TABLE `product` ADD FOREIGN KEY (`sm_category_id`) REFERENCES `small_category` (`id`);
 
-ALTER TABLE `prouduct_image` ADD FOREIGN KEY (`product_id`) REFERENCES `product` (`id`);
+ALTER TABLE `product_image` ADD FOREIGN KEY (`product_id`) REFERENCES `product` (`id`);
 
 ALTER TABLE `option` ADD FOREIGN KEY (`product_id`) REFERENCES `product` (`id`);
 
@@ -206,7 +210,7 @@ ALTER TABLE `item` ADD FOREIGN KEY (`option_id`) REFERENCES `option` (`id`);
 
 ALTER TABLE `item` ADD FOREIGN KEY (`warehouse_id`) REFERENCES `warehouse` (`id`);
 
-ALTER TABLE `supply` ADD FOREIGN KEY (`item_id`) REFERENCES `item` (`id`);
+ALTER TABLE `supply` ADD FOREIGN KEY (`product_id`) REFERENCES `product` (`id`);
 
 ALTER TABLE `supply` ADD FOREIGN KEY (`warehouse_id`) REFERENCES `warehouse` (`id`);
 
