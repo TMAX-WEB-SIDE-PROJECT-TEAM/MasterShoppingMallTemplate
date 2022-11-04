@@ -11,6 +11,7 @@ import FooterShopSVG from "/public/svg/footer-shop.svg";
 import ShopSortSVG from "/public/svg/shop-sort.svg";
 import ShopArrowSVG from "/public/svg/shop-arrow.svg";
 import ShopStarSVG from "/public/svg/shop-star.svg";
+import SimpleDialogCloseSVG from "/public/svg/simple-dialog-close.svg";
 
 export {
   HeaderBellSVG,
@@ -22,4 +23,5 @@ export {
   ShopSortSVG,
   ShopArrowSVG,
   ShopStarSVG,
+  SimpleDialogCloseSVG as ImageViewerCloseSVG,
 };
