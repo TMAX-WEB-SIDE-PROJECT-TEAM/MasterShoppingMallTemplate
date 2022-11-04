@@ -12,9 +12,9 @@
     "lint:fix": "next lint --dir src --fix"
   },
   "dependencies": {
-    "@emotion/react": "^11.10.0",
-    "@emotion/styled": "^11.10.0",
-    "@mui/material": "^5.10.1",
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@mui/material": "^5.10.12",
     "axios": "^0.27.2",
     "classnames": "^2.3.1",
     "next": "^12.2.5",

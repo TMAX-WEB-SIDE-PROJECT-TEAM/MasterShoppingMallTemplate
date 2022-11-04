@@ -77,10 +77,59 @@
   }
 }
 
+.sampleImageButton {
+  cursor: pointer;
+
+  width: 100%;
+  padding: 0;
+  background-color: transparent;
+  border: 0;
+}
+
 .sampleImage {
   width: 100%;
+}
 
-  &:not(:last-of-type) {
-    margin-bottom: 22px;
-  }
+.sampleImageViewer {
+  width: 100%;
+}
+
+.reviewName {
+  text-decoration: underline;
+
+  margin-bottom: 9px;
+  font-family: Theme.$monospaceFont;
+  font-size: 32px;
+  line-height: 42px;
+}
+
+.review {
+  display: flex;
+  flex-direction: row;
+
+  width: 100%;
+  height: 117px;
+  margin-bottom: 9px;
+
+  background-color: #ececec;
+}
+
+.reviewImage {
+  object-fit: cover;
+
+  height: 100%;
+}
+
+.reviewContent {
+  box-sizing: border-box;
+
+  flex: 1;
+  height: 100%;
+  padding: 5px;
+  font-family: Theme.$monospaceFont;
+  font-size: 8px;
+}
+
+.reviewTitle {
+  font-weight: bold;
 }
