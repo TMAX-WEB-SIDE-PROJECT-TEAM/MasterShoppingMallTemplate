@@ -2,7 +2,7 @@ import { routes } from "common/Routes";
 import WrappedLink from "common/components/WrappedLink";
 import styles from "modules/shop/components/ProductCard.module.scss";
 
-interface ProductCardProps {
+export interface ProductCardProps {
   name: string;
   price: number;
   imageURL: string;

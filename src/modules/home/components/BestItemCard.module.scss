@@ -1,0 +1,27 @@
+@use "common/styles/Theme";
+
+.bestItemtCard {
+  box-sizing: border-box;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+  padding-top: 8px;
+
+  font-family: Theme.$monospaceFont;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.imageArea {
+  margin: auto 0;
+  width: 450px;
+}
+
+.price {
+  margin-top: auto;
+  margin-bottom: 15px;
+}
