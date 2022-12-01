@@ -1,7 +1,7 @@
 import { ComponentProps, forwardRef } from "react";
 import Link from "next/link";
 
-type WrappedLinkProps = ComponentProps<"a">;
+type WrappedLinkProps = Omit<ComponentProps<typeof Link>, "href"> & { href?: string };
 
 /**
  * Next.js에서는 링크(<a>)들이 Next.js와 내부적으로 연동이 되도록 <Link> 컴포넌트를 제공합니다.
@@ -12,25 +12,23 @@ type WrappedLinkProps = ComponentProps<"a">;
  * - 내부 URL(ex. "/hello")의 경우 같은 탭에서, 외부 URL(ex. "https://www.naver.com")의 경우 새 탭에서 링크가 열립니다.
  * - ref가 적절하게 설정됩니다.
  */
-const WrappedLink = forwardRef<HTMLAnchorElement, WrappedLinkProps>(({ href, children, ...others }, ref) => {
-  const isExternal = !href?.startsWith("/");
-
-  return (
-    <Link href={href ?? "#"}>
-      <a
-        ref={ref}
-        // 외부 URL은 새 탭에서 연다.
-        target={isExternal ? "_blank" : undefined}
-        // https://joshua-dev-story.blogspot.com/2020/12/html-rel-noopener-noreferrer.html
-        rel={isExternal ? "noreferrer noopener" : undefined}
-        {...others}
-      >
-        {children}
-      </a>
-    </Link>
-  );
-});
+const WrappedLink = forwardRef<HTMLAnchorElement, WrappedLinkProps>(({ href = "/", children, ...others }, ref) => (
+  <Link
+    ref={ref}
+    href={href}
+    // Open external links at the new tabs.
+    {...(!isInternalLink(href) && { target: "_blank", rel: "noreferrer noopener" })}
+    {...others}
+  >
+    {/* We separate `children` from `others` to avoid anchor-has-content lint error. */}
+    {children}
+  </Link>
+));
 
 WrappedLink.displayName = "WrappedLink";
+
+function isInternalLink(href: string) {
+  return href.startsWith("/");
+}
 
 export default WrappedLink;
