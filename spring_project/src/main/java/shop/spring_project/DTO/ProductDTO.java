@@ -7,6 +7,7 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 public class ProductDTO {
+
     private Long id;
 
     private Long lg_category_id;
@@ -23,9 +24,9 @@ public class ProductDTO {
 
     private int limit;
 
-    private Long summary;
+    private String summary;
 
-    private Long content;
+    private String content;
 
     private LocalDateTime created_at;
 

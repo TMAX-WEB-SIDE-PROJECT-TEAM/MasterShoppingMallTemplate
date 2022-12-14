@@ -31,9 +31,9 @@ public class Product {
 
     private int limit;
 
-    private Long summary;
+    private String summary;
 
-    private Long content;
+    private String content;
 
     private LocalDateTime created_at;
 
@@ -47,6 +47,7 @@ public class Product {
 
     private int cost;
 
+    /*
     public void addStock(int quantity) {this.quantity += quantity;}
 
     public void removeStock(int quantity) {
@@ -56,4 +57,5 @@ public class Product {
         }
         this.quantity = restStock;
     }
+    */
 }

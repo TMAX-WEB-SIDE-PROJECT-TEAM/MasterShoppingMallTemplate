@@ -116,7 +116,7 @@ CREATE TABLE `medium_category` (
 );
 
 CREATE TABLE `small_category` (
-  `id` bigint PRIMARY KEY AUTO_INCREMENT,
+  `id` bigint PRIMARY KEY,
   `name` varchar(255)
 );
 
@@ -135,13 +135,6 @@ CREATE TABLE `warehouse` (
   `phone` varchar(255)
 );
 
-CREATE TABLE `item` (
-  `id` int PRIMARY KEY AUTO_INCREMENT,
-  `option_id` int,
-  `warehouse_id` int,
-  `quantity` int,
-  `cost` int
-);
 
 CREATE TABLE `supply` (
   `product_id` bigint,
@@ -172,17 +165,17 @@ CREATE TABLE `cart` (
 
 CREATE TABLE `magazine` (
   `id` int PRIMARY KEY AUTO_INCREMENT,
-  `lgId` bigint,
-  `mdId` bigint,
-  `smId` bigint,
+  `lg_id` bigint,
+  `md_id` bigint,
+  `sm_id` bigint,
   `content` varchar(255)
 );
 
-ALTER TABLE `magazine` ADD FOREIGN KEY (`lgId`) REFERENCES `large_category` (`id`);
+ALTER TABLE `magazine` ADD FOREIGN KEY (`lg_id`) REFERENCES `large_category` (`id`);
 
-ALTER TABLE `magazine` ADD FOREIGN KEY (`mdId`) REFERENCES `medium_category` (`id`);
+ALTER TABLE `magazine` ADD FOREIGN KEY (`md_id`) REFERENCES `medium_category` (`id`);
 
-ALTER TABLE `magazine` ADD FOREIGN KEY (`smId`) REFERENCES `small_category` (`id`);
+ALTER TABLE `magazine` ADD FOREIGN KEY (`sm_id`) REFERENCES `small_category` (`id`);
 
 ALTER TABLE `User` ADD FOREIGN KEY (`client_id`) REFERENCES `oauth_client_details` (`id`);
 
@@ -206,9 +199,9 @@ ALTER TABLE `product_image` ADD FOREIGN KEY (`product_id`) REFERENCES `product` 
 
 ALTER TABLE `option` ADD FOREIGN KEY (`product_id`) REFERENCES `product` (`id`);
 
-ALTER TABLE `item` ADD FOREIGN KEY (`option_id`) REFERENCES `option` (`id`);
+ALTER TABLE `product` ADD FOREIGN KEY (`option_id`) REFERENCES `option` (`id`);
 
-ALTER TABLE `item` ADD FOREIGN KEY (`warehouse_id`) REFERENCES `warehouse` (`id`);
+ALTER TABLE `product` ADD FOREIGN KEY (`warehouse_id`) REFERENCES `warehouse` (`id`);
 
 ALTER TABLE `supply` ADD FOREIGN KEY (`product_id`) REFERENCES `product` (`id`);
 
