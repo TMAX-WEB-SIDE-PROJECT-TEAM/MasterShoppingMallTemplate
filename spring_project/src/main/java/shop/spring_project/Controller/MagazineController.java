@@ -1,5 +1,6 @@
 package shop.spring_project.Controller;
 
+import lombok.Getter;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -20,15 +21,19 @@ public class MagazineController {
 
     @GetMapping("/magazine/read/{id}")
     public MagazineDTO getOneMagazine(@PathVariable("id") Long id){
-        MagazineDTO magazineDTO = magazineService.getMagazine(id);
+        MagazineDTO magazineDTO = magazineService.findMagazine(id);
         return  magazineDTO;
     }
 
     @GetMapping("/magazine/brand/{lgId}")
     public List<MagazineDTO> getMagazines(@PathVariable("lgId") Long lgId){
-        return magazineService.getBrandMagazines(lgId);
+        return magazineService.findBrandMagazines(lgId);
     }
 
+    @GetMapping("/magazine/all")
+    public List<MagazineDTO> getAllMagazines() {
+        return magazineService.findAllMagazines();
+    }
     @PostMapping("/magazine/add")
     public Long createMagazine(@RequestBody Magazine magazine){
         return magazineService.addMagazine(magazine);

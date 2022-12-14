@@ -19,13 +19,17 @@ public class MagazineService {
     private final MagazineMapper modelMapper = new MagazineMapper();
     public MagazineService(MagazineRepository magazineRepository) {this.magazineRepository = magazineRepository;}
 
-    public MagazineDTO getMagazine(Long id) {
+    public MagazineDTO findMagazine(Long id) {
         return modelMapper.convertEntityToDto(magazineRepository.findById(id).get());
     }
 
-    public List<MagazineDTO> getBrandMagazines(Long lgId) {
+    public List<MagazineDTO> findBrandMagazines(Long lgId) {
         List<MagazineDTO> magazineDTO = magazineRepository.findAllByLgId(lgId).stream().map(m -> modelMapper.map(m, MagazineDTO.class)).collect(Collectors.toList());
         return magazineDTO;
+    }
+
+    public List<MagazineDTO> findAllMagazines() {
+        return magazineRepository.findAll().stream().map(m -> modelMapper.map(m, MagazineDTO.class)).collect(Collectors.toList());
     }
 
     @Transactional
