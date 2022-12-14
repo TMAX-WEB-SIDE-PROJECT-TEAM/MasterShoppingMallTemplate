@@ -18,3 +18,21 @@ export function range(start: number, end: number) {
 
   return results;
 }
+
+/**
+ * 주어진 숫자 앞에 길이만큼 `head`를 붙임.
+ */
+export function formatInt(value: number, length: number, head = "0") {
+  return `${value}`.padStart(length, head);
+}
+
+/**
+ * 주어진 날짜를 포맷팅하기 쉬운 문자열들로 변환.
+ */
+export function dateToStrings(date: Date) {
+  return {
+    year: formatInt(date.getFullYear(), 4),
+    month: formatInt(date.getMonth() + 1, 2),
+    day: formatInt(date.getDate(), 2),
+  };
+}

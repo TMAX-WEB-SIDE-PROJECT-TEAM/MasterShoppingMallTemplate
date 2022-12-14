@@ -23,5 +23,5 @@ export {
   ShopSortSVG,
   ShopArrowSVG,
   ShopStarSVG,
-  SimpleDialogCloseSVG as ImageViewerCloseSVG,
+  SimpleDialogCloseSVG,
 };

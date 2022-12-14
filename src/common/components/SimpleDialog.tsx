@@ -1,7 +1,7 @@
 import { ReactNode, useState } from "react";
 import Dialog from "@mui/material/Dialog";
 
-import { ImageViewerCloseSVG } from "common/components/Assets";
+import { SimpleDialogCloseSVG } from "common/components/Assets";
 
 import styles from "common/components/SimpleDialog.module.scss";
 
@@ -39,7 +39,7 @@ const SimpleDialog = ({ children, renderTarget }: SimpleDialogProps) => {
         <div className={styles.simpleDialogArea}>
           {children}
           <button className={styles.simpleDialogCloseButton} onClick={handleClose}>
-            <ImageViewerCloseSVG />
+            <SimpleDialogCloseSVG />
           </button>
         </div>
       </Dialog>
