@@ -1,0 +1,178 @@
+@use "common/styles/Theme";
+@use "common/styles/Utils";
+
+.buyList {
+  width: 100%;
+  font-family: Theme.$monospaceFont;
+}
+
+.buyItem {
+  box-sizing: border-box;
+  position: relative;
+
+  width: 100%;
+  height: 97px;
+  padding-top: 4px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-bottom: 1px solid #7e7e7e;
+}
+
+.buyDate {
+  margin-bottom: 8px;
+
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+.buyCheckButton {
+  cursor: pointer;
+  position: absolute;
+
+  top: 8px;
+  right: 17px;
+  width: 12px;
+  height: 12px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  color: Theme.$white;
+  background-color: Theme.$black;
+  font-size: 8px;
+}
+
+.buyContent {
+  display: flex;
+  flex-direction: row;
+
+  width: 100%;
+}
+
+.buyImageArea {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  width: 115px;
+}
+
+.buyImage {
+  height: 61px;
+}
+
+.buyInfo {
+  flex: 1;
+  height: 100%;
+}
+
+.buyBrandName {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 13px;
+}
+
+.buyProductName {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+
+  margin-top: 6px;
+
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 13px;
+}
+
+.buySize {
+  color: #ababab;
+  font-size: 8px;
+  font-weight: 400;
+  line-height: 10px;
+}
+
+.buyPrice {
+  display: flex;
+  flex-direction: row;
+
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 13px;
+}
+
+.buyButtonsArea {
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 3px;
+  margin-left: 17px;
+}
+
+.buyBuyButton,
+.buyDeleteButton {
+  box-sizing: border-box;
+  cursor: pointer;
+
+  width: 88px;
+  height: 23px;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 2px;
+
+  font-family: Theme.$monospaceFont;
+  font-size: 10px;
+}
+
+.buyBuyButton {
+  border-color: Theme.$black;
+  background-color: Theme.$black;
+  color: Theme.$white;
+}
+
+.buyDeleteButton {
+  margin-top: 4px;
+
+  border-color: #ababab;
+  background-color: Theme.$white;
+  color: Theme.$black;
+}
+
+.buyCounterArea {
+  margin-left: auto;
+}
+
+.buyCounterButton {
+  cursor: pointer;
+
+  width: 12px;
+  height: 12px;
+  padding: 0;
+  border: 0;
+  font-size: 10px;
+  color: Theme.$white;
+  background-color: Theme.$black;
+}
+
+.buyCounter {
+  margin-left: 7px;
+  margin-right: 7px;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.buyResult {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  height: 70px;
+  padding-right: 17px;
+}
+
+.buyTotalPrice {
+  flex: 1;
+  margin-left: 14px;
+  font-size: 12px;
+  font-weight: 700;
+}

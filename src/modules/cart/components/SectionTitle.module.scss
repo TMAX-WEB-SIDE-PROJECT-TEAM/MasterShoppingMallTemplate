@@ -1,0 +1,18 @@
+@use "common/styles/Theme";
+@use "common/styles/Utils";
+
+.sectionTitle {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  width: 100%;
+  height: 70px;
+  padding-left: 24px;
+  border-bottom: 1px solid Theme.$black;
+
+  font-family: Theme.$monospaceFont;
+  font-size: 24px;
+  font-weight: 400;
+}
