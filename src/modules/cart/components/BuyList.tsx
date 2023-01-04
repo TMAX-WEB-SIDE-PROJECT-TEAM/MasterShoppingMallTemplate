@@ -1,58 +1,71 @@
+import { useState } from "react";
+import { useRouter } from "next/router";
+
+import { routes } from "common/Routes";
+import { dateToStrings } from "common/utils/MathUtils";
 import SectionTitle from "modules/cart/components/SectionTitle";
 
-import styles, { buyDate } from "modules/cart/components/BuyList.module.scss";
-import { dateToStrings } from "common/utils/MathUtils";
-import { useState } from "react";
+import styles from "modules/cart/components/BuyList.module.scss";
 
-const BuyList = () => (
-  <div className={styles.buyList}>
-    <SectionTitle>장바구니</SectionTitle>
-    <BuyItem
-      date={new Date(2022, 8 - 1, 12)}
-      imageURL="/image/cart-dummy-product1.png"
-      brandName="pottery"
-      productName="Comfort Shirts Pink"
-      size={3}
-      price={129000}
-    />
-    <BuyItem
-      date={new Date(2022, 8 - 1, 11)}
-      imageURL="/image/cart-dummy-product2.png"
-      brandName="pottery"
-      productName="Comfort Shirts Green"
-      size={3}
-      price={129000}
-    />
-    <BuyItem
-      date={new Date(2022, 8 - 1, 10)}
-      imageURL="/image/cart-dummy-product3.png"
-      brandName="pottery"
-      productName="Comfort Shirts Lavendar"
-      size={3}
-      price={129000}
-    />
-    <BuyItem
-      date={new Date(2022, 8 - 1, 9)}
-      imageURL="/image/cart-dummy-product2.png"
-      brandName="pottery"
-      productName="Comfort Shirts Green"
-      size={3}
-      price={129000}
-    />
-    <BuyItem
-      date={new Date(2022, 8 - 1, 8)}
-      imageURL="/image/cart-dummy-product3.png"
-      brandName="pottery"
-      productName="Comfort Shirts Lavendar"
-      size={3}
-      price={129000}
-    />
-    <div className={styles.buyResult}>
-      <div className={styles.buyTotalPrice}>전체 금액: 258000</div>
-      <button className={styles.buyBuyButton}>구매하기</button>
+const BuyList = () => {
+  const router = useRouter();
+
+  const handleClickBuy = () => {
+    router.push(routes.cart.order);
+  };
+
+  return (
+    <div className={styles.buyList}>
+      <SectionTitle>장바구니</SectionTitle>
+      <BuyItem
+        date={new Date(2022, 8 - 1, 12)}
+        imageURL="/image/cart-dummy-product1.png"
+        brandName="pottery"
+        productName="Comfort Shirts Pink"
+        size={3}
+        price={129000}
+      />
+      <BuyItem
+        date={new Date(2022, 8 - 1, 11)}
+        imageURL="/image/cart-dummy-product2.png"
+        brandName="pottery"
+        productName="Comfort Shirts Green"
+        size={3}
+        price={129000}
+      />
+      <BuyItem
+        date={new Date(2022, 8 - 1, 10)}
+        imageURL="/image/cart-dummy-product3.png"
+        brandName="pottery"
+        productName="Comfort Shirts Lavendar"
+        size={3}
+        price={129000}
+      />
+      <BuyItem
+        date={new Date(2022, 8 - 1, 9)}
+        imageURL="/image/cart-dummy-product2.png"
+        brandName="pottery"
+        productName="Comfort Shirts Green"
+        size={3}
+        price={129000}
+      />
+      <BuyItem
+        date={new Date(2022, 8 - 1, 8)}
+        imageURL="/image/cart-dummy-product3.png"
+        brandName="pottery"
+        productName="Comfort Shirts Lavendar"
+        size={3}
+        price={129000}
+      />
+      <div className={styles.buyResult}>
+        <div className={styles.buyTotalPrice}>전체 금액: 258000</div>
+        <button className={styles.buyBuyButton} onClick={handleClickBuy}>
+          구매하기
+        </button>
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 interface BuyItemProps {
   date: Date;

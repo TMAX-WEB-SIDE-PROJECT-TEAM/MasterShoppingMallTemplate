@@ -16,6 +16,7 @@ export const routes = {
   },
   cart: {
     index: "/cart",
+    order: "/cart/order",
   },
   noti: {
     index: "/noti",
